@@ -1,0 +1,25 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ <title>Turing Machine</title>
+  <meta name="Turing Machine in js" content="Turing Machine binary increment">
+  <meta name="Tigran" content="TuringMachine">
+  <link rel="stylesheet" href="css/styles.css">
+     </head>
+  <body style="background-color: #FFFFFF;">
+ <div>
+
+<label for="name">input tape</label>
+<input type="text" id="tapeValue" name="tape"  required >
+ <button type="button" onclick="init()">Set Tape</button> 
+  <button type="button" onclick="doStep()">Step</button> 
+
+   <div class="tape"></div>
+   <div id="tape-holder">
+<canvas id="tape-canvas" width="1349" height="120"></canvas>
+</div>
+    </div>
+      <script src="js/turingMachine.js"></script>
+  </body>
+  </html>
