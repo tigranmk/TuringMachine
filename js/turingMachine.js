@@ -138,10 +138,9 @@ function init() {
   var tapeInput = document.querySelector("#tapeValue").value;
   var tapeValue = tapeInput.replace(/\s/g, '') || "";
   Machiner = new Machine(tapeValue, tapeCanvas);
-   Machiner.redraw()
-
-
+   Machiner.redraw();
 }
+
  
 function doStep() {
         Machiner.step();
