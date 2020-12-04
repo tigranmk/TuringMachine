@@ -11,8 +11,8 @@ var startstop = "";
 }
 
 
-function Machine(tape,tapeCanvas) {
-    this.tape = tape ;
+function Machine(tapeValue,tapeCanvas) {
+    this.tape = tapeValue ;
     this.currentPosition = 0;
     this.timer = 1000;
     this.centerSquare = this.tape.length-1;
@@ -133,10 +133,11 @@ this.scannedSymbol = this.tape.split("").reverse().join("").charAt(this.currentP
 
 
 function init() {
-   var Taper;
+  const numbers = /^[0-1]+$/;
   var tapeCanvas = document.getElementById("tape-canvas");
-  var tape = document.querySelector("#tapeValue").value;
-  Machiner = new Machine(tape, tapeCanvas);
+  var tapeInput = document.querySelector("#tapeValue").value;
+  var tapeValue = tapeInput.replace(/\s/g, '') || "";
+  Machiner = new Machine(tapeValue, tapeCanvas);
    Machiner.redraw()
 
 
