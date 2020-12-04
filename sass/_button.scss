@@ -1,0 +1,48 @@
+
+%btn {
+	display: inline-block;
+	padding: 1em;
+	border-radius: 10px;
+	color:white;
+	cursor: pointer;
+	  &:disabled {
+    color: grey;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.btn-start {
+	@extend %btn;
+	background-color: blue;
+}
+
+.btn-stop {
+	@extend %btn;
+	background-color: red;
+}
+
+
+.btn-init {
+	@extend %btn;
+	background-color: green;
+}
+
+.btn-step {
+	@extend %btn;
+	background-color: chocolate;
+}
+
+.btn-speed {
+	@extend %btn;
+	background-color: #828022;
+	padding:0.5em;
+}
+
+.btn-slow {
+	@extend %btn;
+	background-color: black;
+    padding:0.5em;
+
+}
+ 

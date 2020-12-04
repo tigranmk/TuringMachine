@@ -3,23 +3,38 @@
 <head>
 <meta charset="utf-8">
  <title>Turing Machine</title>
-  <meta name="Turing Machine in js" content="Turing Machine binary increment">
-  <meta name="Tigran" content="TuringMachine">
+  <meta name="Turing Machine in js" content="Turing Machine Simulator">
+  <meta name="Tigran" content="Turing Machine">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
      </head>
-  <body style="background-color: #FFFFFF;">
- <div>
-
-<label for="name">input tape</label>
-<input type="text" id="tapeValue" name="tape"  required >
- <button type="button" onclick="init()">Set Tape</button> 
-  <button type="button" onclick="doStep()">Step</button> 
-
-   <div class="tape"></div>
-   <div id="tape-holder">
-<canvas id="tape-canvas" width="1349" height="120"></canvas>
+  <body onload="init()">
+    <div class="container">
+   <div class="tape-holder">
+<canvas id="tape-canvas" width="1349"  height="120"></canvas>
 </div>
-    </div>
-      <script src="js/turingMachine.js"></script>
+  <header class="main">
+  <img src="img/comp.png" id="canvas_img">
+<input type="number" id="tapeValue" name="tape" placeholder="Set Tape Value" required >
+<span class="error"><p id="tape_error"></p></span>
+ <button type="button" class="btn-init" onclick="init()">Set Tape</button> 
+  <button type="button" class="btn-step" onclick="doStep()">Step</button> 
+<input type="button" class="btn-start" name="startstop" id="startstop" value="Start" onclick="startStop();">
+   <button type="button"  class="btn-speed" onclick="doSpeedup()">Speed up</button> 
+    <button type="button" class="btn-slow" onclick="doSlowdown()">Slow down</button>
+      <h1 class="main-title">Turing Machine Simulator</h1>
+      <div class="main-content">
+        <p class="main-content_text"> The Binary Increment Turing machine will add one to a binary number and halt.<br>
+          It will be started on the right end of the number that is to be incremented.</p>
+      </div>
+  </header>
+    <footer class="footer">
+  <small class="copyright">&copy; Tigran Mkrtchyan,2020
+     </small>
+  </footer>
+</div>
+      <script type="text/javascript" src="js/rotateConfig.js"></script>
+      <script type="text/javascript" src="js/turingmachine.js"></script>
+      <script type="text/javascript" src="js/plsRotate.js"></script>
   </body>
   </html>
