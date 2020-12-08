@@ -1,3 +1,5 @@
+
+var machine = ( function () {
 var Machiner;
 var timer = 1000;
 var start = true;
@@ -142,19 +144,19 @@ function init() {
 }
 
  
-function doStep() {
+function makeStep() {
         Machiner.step();
  }
 
 function startStop() {
-     var startButton = document.querySelector("#startstop");
+  var startButton = document.querySelector("#startstop");
   var tapeButton = document.querySelector(".btn-init");
   var stepButton = document.querySelector(".btn-step");
 
   if(startButton.value == "Start") {
       startstop = "start";
       startButton.value = "Stop";
-      doStep();
+      makeStep();
       startButton.classList.remove("btn-start");
       startButton.classList.add("btn-stop");
       tapeButton.disabled = true;
@@ -172,13 +174,23 @@ function startStop() {
 }
 
 
-function doSpeedup()
+function speedup()
 {
   timer = timer / 2;
 }
 
 
-function doSlowdown()
+function slowdown()
 {
   timer = timer * 2;
 }
+
+ return {
+  doInit: init,
+  doStep: makeStep,
+  doStartStop: startStop,
+  doSpeedup: speedup,
+  doSlowdown: slowdown
+}
+
+})();

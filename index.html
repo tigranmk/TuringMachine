@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
      </head>
-  <body onload="init()">
+  <body onload="machine.doInit()">
     <div class="container">
    <div class="tape-holder">
 <canvas id="tape-canvas" width="1349"  height="120"></canvas>
@@ -17,11 +17,11 @@
   <img src="img/comp.png" id="canvas_img">
 <input type="number" id="tapeValue" name="tape" placeholder="Set Tape Value" required >
 <span class="error"><p id="tape_error"></p></span>
- <button type="button" class="btn-init" onclick="init()">Set Tape</button> 
-  <button type="button" class="btn-step" onclick="doStep()">Step</button> 
-<input type="button" class="btn-start" name="startstop" id="startstop" value="Start" onclick="startStop();">
-   <button type="button"  class="btn-speed" onclick="doSpeedup()">Speed up</button> 
-    <button type="button" class="btn-slow" onclick="doSlowdown()">Slow down</button>
+ <button type="button" class="btn-init" onclick="machine.doInit()">Set Tape</button> 
+  <button type="button" class="btn-step" onclick="machine.doStep()">Step</button> 
+<input type="button" class="btn-start" name="startstop" id="startstop" value="Start" onclick="machine.doStartStop()">
+   <button type="button"  class="btn-speed" onclick="machine.doSpeedup()">Speed up</button> 
+    <button type="button" class="btn-slow" onclick="machine.doSlowdown()">Slow down</button>
       <h1 class="main-title">Turing Machine Simulator</h1>
       <div class="main-content">
         <p class="main-content_text"> The Binary Increment Turing machine will add one to a binary number and halt.<br>
