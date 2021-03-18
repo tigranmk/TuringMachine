@@ -372,7 +372,7 @@ div.container .tape-holder {
   align-self: flex-start;
 }
 div.container .main {
-  grid-area: 2/1/3/3;
+  grid-area: 3/1/3/3;
   justify-self: center;
 }
 div.container .main-content {
